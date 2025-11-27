@@ -143,7 +143,7 @@ $(TARGETDIR):
 ifeq (posix,$(SHELLTYPE))
 	$(SILENT) mkdir -p $(TARGETDIR)
 else
-	$(SILENT) mkdir $(subst /,\\,$(TARGETDIR))
+	$(SILENT) mkdir "$(subst /,\\,$(TARGETDIR))"
 endif
 
 $(OBJDIR):
